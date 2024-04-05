@@ -18,12 +18,24 @@ export function SiteFooter() {
             </div>
           ))*/}
         </nav>
-        <Link
+        {/*<Link
           href="https://www.fullstack.so"
           className="mt-10 block text-center text-xs leading-5"
         >
           &copy; {new Date().getFullYear()} {siteConfig.name} LLC. All rights
           reserved.
+        </Link>*/}
+        <div
+          className="mt-10 block text-center text-xs leading-5"
+        >
+          &copy; {new Date().getFullYear()} {siteConfig.name} LLC. All rights
+          reserved.
+        </div>
+        <Link
+          href="https://github.com/ihsan-ahmed0"
+          className="mt-10 block text-center text-xs leading-5"
+        >
+          Site by Ihsan Ahmed.
         </Link>
       </div>
     </footer>
