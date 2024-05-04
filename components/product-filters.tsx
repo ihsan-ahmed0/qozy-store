@@ -33,7 +33,7 @@ const filters = [
       { value: "m", label: "Medium" },
       { value: "l", label: "Large" },
       { value: "xl", label: "X-Large" },
-      { value: "one-size", label: "One Size" },
+      // { value: "one-size", label: "One Size" },
     ],
   },
   {

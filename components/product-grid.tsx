@@ -13,6 +13,17 @@ interface Props {
   products: SanityProduct[]
 }
 
+const productMap = new Map([
+  ["purple_hoodie", 0],
+  ["purple_sweats", 1],
+  ["red_hoodie", 2],
+  ["red_sweats", 3],
+  ["light_blue_hoodie", 4],
+  ["light_blue_sweats", 5],
+  ["black_hoodie", 6],
+  ["black_sweats", 7],
+]);
+
 export function ProductGrid({ products }: Props) {
   if (products.length === 0) {
     return (
@@ -26,6 +37,12 @@ export function ProductGrid({ products }: Props) {
       </div>
     )
   }
+
+  products.sort((a: SanityProduct, b: SanityProduct) => {
+    const a_value = productMap.get(a.sku) ? productMap.get(a.sku) : 0;
+    const b_value = productMap.get(b.sku) ? productMap.get(b.sku): 0;
+    return a_value! - b_value!;
+  });
 
   return (
     <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:col-span-3 lg:gap-x-8">

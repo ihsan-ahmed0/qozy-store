@@ -61,7 +61,7 @@ export default async function Page({ searchParams } : Props) {
               {products.length} result{products.length === 1 ? "" : "s"}
             </h1>
             {/* Product Sort */}
-            <ProductSort />
+            {/*<ProductSort /> We don't really need this for now with the number of items we have.*/}
           </div>
 
           <section aria-labelledby="products-heading" className="pb-24 pt-6">
